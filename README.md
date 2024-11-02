@@ -41,7 +41,9 @@ i've created this graph to show the execution flow of `GetInstallOptions`.
 
 if the COM instance is created, cmstp.exe will use it to spawn an elevated `cmd.exe` or the command we specify in the config.
 
-As you can see from the graph, there is two ways to create an elevated COM instance, from displayed options box or the process is already elevated.
+As you can see from the graph, there is two ways to create an elevated COM interface, from displayed options box or the process is already elevated.
 
 # Bypass
+
+to bypass this Patch
 
