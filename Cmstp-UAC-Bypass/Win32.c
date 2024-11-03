@@ -1,13 +1,13 @@
 #include "Win32.h"
 
 PVOID GetProcessImageBase(IN HANDLE hProcess) {
-	PROCESS_BASIC_INFORMATION   pbi = { 0 };
-	ULONG                       uReturnLength = 0;
-	ULONGLONG                   uImageBase = 0;
-	SIZE_T                      sBytesRead = 0;
-	ULONGLONG                   uBaseAddress = 0;
-	NTSTATUS                    ntStatus = 0;
-	NTQIP						pNtQueryInformationProcess = NULL;
+	PROCESS_BASIC_INFORMATION   	pbi 				= { 0 };
+	ULONG                       	uReturnLength 			= 0;
+	ULONGLONG                   	uImageBase 			= 0;
+	SIZE_T                      	sBytesRead 			= 0;
+	ULONGLONG                   	uBaseAddress 			= 0;
+	NTSTATUS                    	ntStatus 			= 0;
+	NTQIP				pNtQueryInformationProcess 	= NULL;
 
 
 	if (hProcess == NULL) {
